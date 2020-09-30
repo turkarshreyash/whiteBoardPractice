@@ -1,0 +1,22 @@
+{ 1, 3, 5, 7, 9 }
+
+k = 1
+k = 3
+k = 6
+k = 4
+
+#include<cstring>
+create array of len 2*n
+
+int *temp = new int[2*n];
+for(int i=0;i<n;i++){
+	temp[i] = temp[i+n] = arr[i];  
+}
+
+int q,rotateBy;
+std::cin>>q;
+for(int i = 0 ; i < q ;i++){
+	std::cin>>rotateBy;
+	memcpy(arr,temp+rotateBy,n);
+}
+
