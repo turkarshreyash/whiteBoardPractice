@@ -1,0 +1,53 @@
+/*
+Given an array you can eighter increase or decrease the height of all the elements fof array by k.
+
+1, 15, 10
+k = 6
+
+1. when to stop => when add to min yeilds a new or subtrating from max yeilds a new min (**)
+2. eighter increase or decerease a number => if number yiekd a new min the add else add also if addition new max i thing we can break
+
+
+average of numbers
+min 1
+max 15
+14
+one thing to note by decreasing a number we don want to create a new smallest number 
+
+min = 1
+max = 15
+*/
+
+//infinite loop
+1 2 3
+k = 2
+3 4 5
+minn 2
+// keep track min and max
+// priority queue
+
+int solve(vector<int> arr, int k){
+	int n = arr.size();
+	int minn = __INT_MAX__;
+	int maxx = 0;
+	// when do I stop
+	// keep track of your minn and maxx
+	while(maxx-minn>=k){
+		for(int i = 0 ; i < n ; i++){
+			if(arr[i]+k < maxx){
+				//add
+				// get new minn
+			}else if(arr[i]-k > minn){
+				// subtraction
+				// get new max
+			}else{
+				if(arr[i]+k-maxx>minn-(arr[i]-k)){
+					minn = arr[i]-k;
+				}else{
+					maxx = arr[i]+k;
+				}
+			}
+		}
+	}
+	
+}
